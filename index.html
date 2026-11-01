@@ -4,36 +4,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jejak Si Heni</title>
+<meta name="description" content="The Teaching Journey, portofolio PPG Prajabatan Universitas Negeri Yogyakarta.">
+<title>The Teaching Journey | E-Portofolio</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --powder: #DCE8F7;
+  --blue: #3159A5;
   --navy: #263653;
-  --cobalt: #3159A5;
-  --sunshine: #F4C84A;
-  --paper: #FBFCFE;
+  --yellow: #F4C84A;
+  --bg: #FBFCFE;
   --muted: #657792;
-  --line: #E5EAF2;
-  --lavender: #F4F1FB;
-  --cream: #FFF7E5;
+  --pale-blue: #EDF3FC;
+  --pale-yellow: #FFF7E5;
+  --pale-lavender: #F4F1FB;
+  --line: #E3EAF4;
+  --white: #FFFFFF;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
-  background: var(--paper);
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
   color: var(--navy);
-  font-family: Arial, sans-serif;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 a {
@@ -41,15 +46,19 @@ a {
   color: inherit;
 }
 
+button {
+  font: inherit;
+}
+
 .container {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1120px, 90%);
   margin: auto;
 }
 
 /* HEADER */
 
-.site-header {
-  background: rgba(255,255,255,.97);
+header {
+  background: white;
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -57,503 +66,641 @@ a {
 }
 
 .header-inner {
-  min-height: 82px;
+  min-height: 76px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .brand {
-  font-family: Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--blue);
+  white-space: nowrap;
 }
 
 .brand span {
-  color: var(--sunshine);
+  color: var(--yellow);
 }
 
 .brand small {
   display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
   color: var(--muted);
-  font: 700 .62rem Arial;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  margin-top: -4px;
 }
 
-.nav {
+nav {
   display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.nav a {
-  padding: 9px 11px;
-  border-radius: 9px;
-  font-size: .84rem;
-  font-weight: bold;
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #526582;
+  white-space: nowrap;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
   transition: .2s;
 }
 
-.nav a:hover,
-.nav a.active {
-  background: var(--cobalt);
-  color: white;
-}
-
-.menu-toggle {
-  display: none;
-  border: 0;
-  background: #F3F6FA;
-  padding: 10px 13px;
-  border-radius: 9px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-/* GENERAL */
-
-main {
-  padding: 34px 0 65px;
-}
-
-.eyebrow {
-  color: var(--cobalt);
-  font-size: .74rem;
-  font-weight: bold;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-}
-
-h1, h2 {
-  font-family: Georgia, serif;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4.7rem);
-  line-height: 1.08;
-  margin: 12px 0 18px;
-}
-
-h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  line-height: 1.2;
-  margin: 8px 0;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.section {
-  padding-top: 65px;
-}
-
-.section-heading {
-  margin-bottom: 22px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  margin-top: 8px;
+nav a:hover,
+nav a.active {
+  color: var(--blue);
+  border-color: var(--yellow);
 }
 
 /* HERO */
 
 .hero {
-  background: linear-gradient(135deg, #F7F9FC, #EFF4FB);
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  padding: clamp(28px, 5vw, 58px);
+  background: var(--pale-blue);
+  padding: 90px 0 85px;
 }
 
-.lead {
-  color: #526782;
-  max-width: 680px;
-  font-size: 1.05rem;
-  margin-bottom: 22px;
+.eyebrow {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-.button-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(36px, 5vw, 55px);
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 11px 17px;
+.hero p {
+  max-width: 650px;
+  font-size: 15px;
+  color: #526582;
+}
+
+.yellow-line {
+  width: 65px;
+  height: 5px;
   border-radius: 10px;
-  font-weight: bold;
-  font-size: .9rem;
-  transition: .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  background: var(--sunshine);
-}
-
-.btn-outline {
-  background: white;
-  border: 1px solid #B8C9E2;
-}
-
-.hero-meta {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  background: var(--yellow);
   margin-top: 25px;
 }
 
-.journey-tag {
-  color: var(--cobalt);
-  font-size: .75rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+/* GENERAL SECTION */
+
+section {
+  scroll-margin-top: 100px;
 }
 
-.hero-note {
+.section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
   color: var(--muted);
-  font-size: .82rem;
+  font-size: 14px;
+  max-width: 700px;
 }
 
 /* PROFILE */
 
-.profile-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 30px;
+.profile-grid {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 28px;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 65px;
   align-items: center;
 }
 
+.profile-photo-wrap {
+  position: relative;
+  max-width: 390px;
+  margin: auto;
+}
+
+.profile-photo-wrap::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 80%;
+  background: var(--yellow);
+  border-radius: 48% 52% 25% 75%;
+  left: -17px;
+  bottom: -17px;
+}
+
 .profile-photo {
-  width: 180px;
-  aspect-ratio: 1;
-  border-radius: 20px;
-  background: var(--powder);
-  display: grid;
-  place-items: center;
-  color: var(--cobalt);
-  font: bold 3.5rem Georgia, serif;
-  overflow: hidden;
-}
-
-.profile-photo img {
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  border-radius: 48% 48% 16px 16px;
+  background: var(--pale-blue);
+  box-shadow: 0 12px 35px rgba(38,54,83,.08);
 }
 
-.profile-copy p {
+.profile-info h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(28px, 4vw, 39px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.profile-name {
+  color: var(--blue);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.profile-detail {
   color: var(--muted);
-  margin: 10px 0 16px;
-}
-
-.profile-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  font-size: .87rem;
-  font-weight: bold;
-}
-
-.fact span {
-  color: var(--cobalt);
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /* ABOUT */
 
-.intro-panel {
-  background: var(--cream);
-  border: 1px solid #F5E9C9;
-  border-radius: 22px;
-  padding: 35px;
+.about-section {
+  background: white;
 }
 
-.intro-panel p {
-  color: #5F6470;
-  margin-top: 12px;
-  max-width: 850px;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 28px;
 }
 
-/* PORTFOLIO CARDS */
+.info-card {
+  padding: 23px 19px;
+  border-radius: 15px;
+  min-height: 135px;
+}
+
+.info-card h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.info-card:nth-child(1) { background: var(--pale-blue); }
+.info-card:nth-child(2) { background: var(--pale-yellow); }
+.info-card:nth-child(3) { background: var(--pale-lavender); }
+.info-card:nth-child(4) { background: #F0F4F9; }
+
+/* PORTFOLIO */
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .portfolio-card {
   display: block;
-  padding: 25px;
-  border-radius: 20px;
-  min-height: 205px;
-  border: 1px solid transparent;
-  transition: .2s;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 27px;
+  box-shadow: 0 12px 35px rgba(38,54,83,.06);
+  transition: .25s;
 }
 
 .portfolio-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(38,54,83,.09);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(38,54,83,.12);
 }
 
-.yellow {
-  background: var(--cream);
-  border-color: #F5E9C9;
+.portfolio-card:nth-child(1) { border-top: 4px solid var(--blue); }
+.portfolio-card:nth-child(2) { border-top: 4px solid var(--yellow); }
+.portfolio-card:nth-child(3) { border-top: 4px solid #A89BD4; }
+.portfolio-card:nth-child(4) { border-top: 4px solid #8CA9D5; }
+
+.card-number {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--blue);
+  background: var(--pale-blue);
+  padding: 6px 10px;
+  border-radius: 30px;
+  margin-bottom: 15px;
 }
 
-.blue {
-  background: #EDF3FC;
-  border-color: #DFE8F6;
-}
-
-.lavender {
-  background: var(--lavender);
-  border-color: #EAE5F5;
-}
-
-.card-icon {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
+.portfolio-card h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
 
 .portfolio-card p {
   color: var(--muted);
-  font-size: .93rem;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.card-link {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+/* DETAIL PAGES */
+
+.detail-section {
+  display: none;
+  background: var(--bg);
+  min-height: 60vh;
+}
+
+.detail-section.show {
+  display: block;
+}
+
+.page-hero {
+  padding: 65px 0;
+  background: var(--pale-blue);
+}
+
+.breadcrumb {
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.page-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.page-hero p {
+  max-width: 700px;
+  color: #526582;
+  font-size: 14px;
+}
+
+.content-panel {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 35px rgba(38,54,83,.05);
+}
+
+.content-panel h2 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.content-panel h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.content-panel p,
+.content-panel li {
+  color: #526582;
+  font-size: 14px;
+}
+
+.content-panel ul,
+.content-panel ol {
+  padding-left: 22px;
+}
+
+.content-panel li {
+  margin: 7px 0;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.resource-card {
+  background: var(--pale-blue);
+  border-radius: 13px;
+  padding: 20px;
+}
+
+.resource-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.resource-card a {
+  display: inline-block;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.empty-note {
+  background: var(--pale-yellow);
+  padding: 18px;
+  border-radius: 12px;
+  color: #6E5A27;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 15px;
 }
 
 /* DOCUMENTATION */
 
-.documentation-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-}
-
-.documentation-card {
+.gallery-section {
   background: white;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  transition: .25s;
 }
 
-.documentation-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(38,54,83,.10);
-}
-
-.documentation-image {
-  aspect-ratio: 4 / 3;
-  background: var(--powder);
-  overflow: hidden;
-  cursor: pointer;
+.gallery-grid {
   display: grid;
-  place-items: center;
-  color: var(--cobalt);
-  font-size: .9rem;
-  text-align: center;
-  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-.documentation-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.gallery-item {
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--pale-blue);
+  cursor: zoom-in;
+  padding: 0;
+}
+
+.gallery-item img {
   display: block;
-  transition: .3s;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .35s;
 }
 
-.documentation-card:hover img {
+.gallery-item:hover img {
   transform: scale(1.04);
 }
 
-.documentation-info {
-  padding: 17px;
+/* CLOSING */
+
+.closing {
+  background: var(--blue);
+  color: white;
+  padding: 52px 0;
 }
 
-.documentation-info h3 {
-  font-size: 1rem;
-  margin-bottom: 5px;
+.closing h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(25px, 4vw, 36px);
+  line-height: 1.3;
+  margin-bottom: 12px;
 }
 
-.documentation-info p {
-  color: var(--muted);
-  font-size: .84rem;
-}
-
-.documentation-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: var(--cobalt);
-  background: #EDF3FC;
-  padding: 4px 9px;
-  border-radius: 20px;
-  font-size: .68rem;
-  font-weight: bold;
-}
-
-.documentation-note {
-  margin-top: 15px;
-  color: var(--muted);
-  font-size: .8rem;
-}
-
-/* IMAGE VIEWER */
-
-.image-viewer {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(20,30,50,.88);
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-}
-
-.image-viewer.show {
-  display: flex;
-}
-
-.image-viewer img {
-  max-width: 90%;
-  max-height: 85vh;
-  border-radius: 12px;
-  object-fit: contain;
-}
-
-.close-viewer {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  border: 0;
-  background: white;
-  color: var(--navy);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.4rem;
-  cursor: pointer;
+.closing p {
+  color: #E8EEFA;
+  font-size: 14px;
+  max-width: 650px;
 }
 
 /* FOOTER */
 
-.site-footer {
-  background: var(--powder);
-  color: var(--navy);
-  padding: 38px 0 22px;
-  margin-top: 70px;
+footer {
+  background: var(--blue);
+  color: white;
+  padding: 42px 0 20px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1.15fr .8fr 1.15fr;
+  gap: 45px;
 }
 
-.footer-title {
-  font: 700 1.5rem Georgia, serif;
-  margin-bottom: 8px;
+.footer-column h3 {
+  color: var(--yellow);
+  font-size: 18px;
+  margin-bottom: 17px;
 }
 
-.footer-copy {
-  color: #405777;
-  font-size: .88rem;
+.footer-column p,
+.footer-column a {
+  color: #E8EEFA;
+  font-size: 13px;
 }
 
-.footer-links {
+.footer-column p {
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 13px;
+  transition: .2s;
+}
+
+.footer-link:hover {
+  color: var(--yellow);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 12px;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
   display: grid;
-  gap: 7px;
-  font-size: .87rem;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: rgba(255,255,255,.13);
+  color: var(--yellow);
+  font-size: 17px;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+.map-frame {
+  width: 100%;
+  height: 205px;
+  border: 0;
+  border-radius: 12px;
+  background: #E7EDF5;
+}
+
+.map-address {
+  font-size: 10px !important;
+  color: #D6E1F1 !important;
+  margin: 10px 0 !important;
+}
+
+.map-button {
+  display: inline-block;
+  background: white;
+  color: var(--blue) !important;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 11px !important;
+  font-weight: 800;
 }
 
 .footer-bottom {
-  border-top: 1px solid #B9CBE2;
-  margin-top: 28px;
-  padding-top: 16px;
-  color: #496184;
-  font-size: .78rem;
+  border-top: 1px solid rgba(255,255,255,.2);
+  margin-top: 30px;
+  padding-top: 17px;
+  text-align: center;
+  color: #D6E1F1;
+  font-size: 11px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(18,29,48,.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: white;
+  color: var(--navy);
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 23px;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
 
 @media(max-width: 850px) {
   .header-inner {
-    min-height: 72px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 15px;
+    align-items: flex-start;
     flex-direction: column;
-    border-bottom: 1px solid var(--line);
+    padding: 17px 0 12px;
+    gap: 10px;
   }
 
-  .nav.open {
-    display: flex;
+  nav {
+    width: 100%;
+    gap: 19px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+  .profile-grid {
+    gap: 35px;
   }
 
-  .documentation-grid {
+  .info-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .profile-card {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-column:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media(max-width: 560px) {
+  .hero {
+    padding: 65px 0;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-photo-wrap {
+    max-width: 290px;
+  }
+
+  .portfolio-grid,
+  .resource-grid {
     grid-template-columns: 1fr;
   }
 
-  .profile-photo {
-    width: 135px;
+  .gallery-grid {
+    gap: 9px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media(max-width: 500px) {
-  .documentation-grid {
-    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .hero-meta {
-    flex-direction: column;
+  .footer-column:last-child {
+    grid-column: auto;
   }
 
-  .container {
-    width: calc(100% - 28px);
-  }
-
-  .image-viewer img {
-    max-width: 100%;
+  .content-panel {
+    padding: 21px;
   }
 }
 </style>
@@ -562,439 +709,668 @@ h3 {
 <body>
 
 <!-- HEADER -->
-<header class="site-header">
+<header>
   <div class="container header-inner">
-
-    <a class="brand" href="index.html">
-      the creative journal<span>.</span>
-      <small>MY PPG LEARNING PORTFOLIO</small>
+    <a href="#beranda" class="brand">
+      The Teaching Journey<span>.</span>
+      <small>PPG PRAJABATAN · UNY · 2026</small>
     </a>
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Buka menu" aria-expanded="false">☰</button>
-
-    <nav class="nav" id="mainNav">
-      <a class="active" href="index.html">Beranda</a>
-      <a href="eportfolio1.html">E-Portfolio 1</a>
-      <a href="portfolio1.html">Portofolio 1</a>
-      <a href="portfolio2.html">Portofolio 2</a>
-      <a href="portfolio3.html">Portofolio 3</a>
-      <a href="reflections.html">Refleksi</a>
+    <nav id="mainNav">
+      <a href="#beranda" class="active">Beranda</a>
+      <a href="#portofolio-1">Portofolio 1</a>
+      <a href="#portofolio-2">Portofolio 2</a>
+      <a href="#refleksi">Refleksi</a>
+      <a href="#ppl-terbimbing">Portofolio PPL Terbimbing</a>
     </nav>
-
   </div>
 </header>
 
-<main class="container">
+<!-- BERANDA -->
+<main id="beranda">
 
-  <!-- HERO -->
   <section class="hero">
-
-    <div class="eyebrow">
-      Pendidikan Teknologi Informasi / Informatika
+    <div class="container">
+      <div class="eyebrow">PORTOFOLIO PENDIDIKAN</div>
+      <h1>Jejak Pengembangan Diri</h1>
+      <p>
+        Selamat datang di portofolio yang mendokumentasikan perjalanan,
+        pengalaman, dan perkembangan saya selama praktik mengajar.
+      </p>
+      <div class="yellow-line"></div>
     </div>
-
-    <h1>Jejak Pengembangan Diri</h1>
-
-    <p class="lead">
-      Sebuah perjalanan belajar, bertumbuh, dan mengembangkan
-      kompetensi sebagai calon pendidik melalui pengalaman praktik mengajar.
-    </p>
-
-    <div class="button-row">
-      <a href="portfolio1.html" class="btn btn-primary">
-        Jelajahi Portofolio ↗
-      </a>
-
-      <a href="eportfolio1.html" class="btn btn-outline">
-        E-Portfolio 1
-      </a>
-    </div>
-
-    <div class="hero-meta">
-      <span class="journey-tag">
-        LEARNING · GROWING · BECOMING
-      </span>
-
-      <span class="hero-note">
-        PPG Prajabatan · Universitas Negeri Yogyakarta · 2026
-      </span>
-    </div>
-
   </section>
 
-  <!-- PROFILE -->
+  <!-- PROFIL -->
   <section class="section">
+    <div class="container profile-grid">
 
-    <div class="section-heading">
-      <div class="eyebrow">About Me</div>
-      <h2>Mengenal Heniiii</h2>
+      <div class="profile-photo-wrap">
+        <img
+          src="assets/foto-profil.jpg"
+          alt="Foto profil"
+          class="profile-photo"
+        >
+      </div>
+
+      <div class="profile-info">
+        <div class="eyebrow">PERKENALAN</div>
+        <h2>Halo, Saya Calon Pendidik.</h2>
+        <div class="profile-name">Vian</div>
+        <p class="profile-detail">Universitas Negeri Yogyakarta</p>
+        <p class="profile-detail">Informatika</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="profile-card">
+  <!-- TENTANG -->
+  <section class="section about-section">
+    <div class="container">
 
-      <div class="profile-photo">V.</div>
-
-      <div class="profile-copy">
-
-        <h3>[Nama Lengkap]</h3>
-
+      <div class="section-heading">
+        <h2>Tentang Portofolio Ini</h2>
         <p>
-          Mahasiswa PPG Prajabatan 2026 di Universitas Negeri Yogyakarta,
-          bidang studi Pendidikan Teknologi Informasi/Informatika.
-          Saat ini menjalani praktik pengalaman lapangan di
-          SMK Negeri 2 Yogyakarta.
+          Portofolio ini menjadi dokumentasi perjalanan selama mengikuti
+          PPG Prajabatan. Berbagai perangkat pembelajaran, pengalaman
+          praktik, hasil refleksi, dan bukti kegiatan disusun untuk
+          menggambarkan proses pengembangan kompetensi sebagai calon guru.
         </p>
+      </div>
 
-        <div class="profile-facts">
-          <span class="fact">
-            <span>✦</span> Universitas Negeri Yogyakarta
-          </span>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Pembelajaran</h3>
+          <p>Proses dan pengalaman dalam mengembangkan kompetensi pembelajaran.</p>
+        </article>
 
-          <span class="fact">
-            <span>✦</span> SMK Negeri 2 Yogyakarta
-          </span>
+        <article class="info-card">
+          <h3>Pengembangan</h3>
+          <p>Upaya meningkatkan kemampuan dan profesionalisme sebagai pendidik.</p>
+        </article>
 
-          <span class="fact">
-            <span>✦</span> Bidang Studi Informatika
-          </span>
-        </div>
+        <article class="info-card">
+          <h3>Refleksi</h3>
+          <p>Evaluasi pengalaman belajar untuk menentukan langkah perbaikan.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Pengalaman PPL</h3>
+          <p>Dokumentasi pengalaman praktik nyata di lingkungan sekolah.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KOLEKSI PORTOFOLIO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Jelajahi Portofolio</h2>
+        <p>
+          Dokumentasi perjalanan praktik dan pengembangan kompetensi
+          selama mengikuti program PPG Prajabatan.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <a href="#portofolio-1" class="portfolio-card">
+          <span class="card-number">PORTOFOLIO 01</span>
+          <h3>Praktik Mengajar Mandiri Siklus 1</h3>
+          <p>
+            Perangkat pembelajaran terbaik dan dokumentasi video
+            praktik mengajar pada siklus pertama.
+          </p>
+          <span class="card-link">Lihat portofolio →</span>
+        </a>
+
+        <a href="#portofolio-2" class="portfolio-card">
+          <span class="card-number">PORTOFOLIO 02</span>
+          <h3>Praktik Mengajar Mandiri Siklus 2–4</h3>
+          <p>
+            Perangkat pembelajaran terbaik dan dokumentasi video
+            praktik mengajar pada siklus kedua hingga keempat.
+          </p>
+          <span class="card-link">Lihat portofolio →</span>
+        </a>
+
+        <a href="#refleksi" class="portfolio-card">
+          <span class="card-number">PORTOFOLIO 03</span>
+          <h3>Refleksi</h3>
+          <p>
+            Filosofi mengajar, evaluasi pengalaman, identifikasi
+            kekuatan dan kelemahan, serta rencana tindak lanjut.
+          </p>
+          <span class="card-link">Lihat portofolio →</span>
+        </a>
+
+        <a href="#ppl-terbimbing" class="portfolio-card">
+          <span class="card-number">PORTOFOLIO 04</span>
+          <h3>Portofolio PPL Terbimbing</h3>
+          <p>
+            Dokumentasi pengalaman, kegiatan, dan hasil pelaksanaan
+            praktik pengalaman lapangan terbimbing.
+          </p>
+          <span class="card-link">Lihat portofolio →</span>
+        </a>
 
       </div>
     </div>
-
   </section>
 
-  <!-- ABOUT PORTFOLIO -->
-  <section class="section">
+  <!-- DOKUMENTASI -->
+  <section class="section gallery-section">
+    <div class="container">
 
-    <div class="intro-panel">
+      <div class="section-heading">
+        <h2>Dokumentasi PPL</h2>
+        <p>
+          Potongan pengalaman dan kegiatan selama melaksanakan
+          praktik pengalaman lapangan di sekolah.
+        </p>
+      </div>
 
-      <div class="eyebrow">About This Portfolio</div>
+      <div class="gallery-grid">
 
-      <h2>Tentang E-Portfolio</h2>
+        <button class="gallery-item" type="button">
+          <img src="assets/dokumentasi-1.jpg" alt="Dokumentasi PPL 1">
+        </button>
 
-      <p>
-        E-portfolio ini menyajikan dokumentasi perencanaan,
-        pelaksanaan, dan penilaian pembelajaran, disertai analisis
-        artefak serta refleksi pengalaman selama praktik mengajar.
-        Setiap bagian menjadi catatan proses belajar dan pengembangan
-        kompetensi sebagai calon guru.
-      </p>
+        <button class="gallery-item" type="button">
+          <img src="assets/dokumentasi-2.jpg" alt="Dokumentasi PPL 2">
+        </button>
 
+        <button class="gallery-item" type="button">
+          <img src="assets/dokumentasi-3.jpg" alt="Dokumentasi PPL 3">
+        </button>
+
+        <button class="gallery-item" type="button">
+          <img src="assets/dokumentasi-4.jpg" alt="Dokumentasi PPL 4">
+        </button>
+
+      </div>
     </div>
-
   </section>
 
-  <!-- EXPLORE PORTFOLIO -->
-  <section class="section">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">Explore My Portfolio</div>
-
-      <h2>Jelajahi Portofolio</h2>
-
+  <!-- PENUTUP -->
+  <section class="closing">
+    <div class="container">
+      <h2>Belajar, Bertumbuh, dan Menginspirasi.</h2>
       <p>
-        Temukan hasil praktik, dokumentasi, dan refleksi perjalanan pembelajaran.
+        Setiap langkah menjadi bagian dari proses pengembangan diri
+        sebagai seorang pendidik.
       </p>
-
     </div>
-
-    <div class="portfolio-grid">
-
-      <a href="portfolio1.html" class="portfolio-card yellow">
-        <div class="card-icon">▤</div>
-        <h3>Portofolio 1</h3>
-        <p>
-          Dokumentasi rancangan pembelajaran dan pelaksanaan praktik mengajar.
-        </p>
-      </a>
-
-      <a href="portfolio2.html" class="portfolio-card blue">
-        <div class="card-icon">▣</div>
-        <h3>Portofolio 2</h3>
-        <p>
-          Kumpulan produk pembelajaran dan bukti praktik mengajar lanjutan.
-        </p>
-      </a>
-
-      <a href="portfolio3.html" class="portfolio-card lavender">
-        <div class="card-icon">✧</div>
-        <h3>Portofolio 3</h3>
-        <p>
-          Dokumentasi hasil praktik, pengembangan pembelajaran,
-          analisis, dan pengalaman mengajar berikutnya.
-        </p>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- DOCUMENTATION -->
-  <section class="section" id="dokumentasi">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">My PPL Journey</div>
-
-      <h2>Dokumentasi PPL</h2>
-
-      <p>
-        Mengabadikan proses, pengalaman, dan berbagai kegiatan selama
-        menjalani praktik pengalaman lapangan di sekolah.
-      </p>
-
-    </div>
-
-    <div class="documentation-grid">
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-1.jpg"
-            alt="Dokumentasi praktik mengajar"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto praktik mengajar'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">PRAKTIK MENGAJAR</span>
-          <h3>Kegiatan Pembelajaran</h3>
-          <p>
-            Pengalaman melaksanakan kegiatan pembelajaran
-            bersama peserta didik di kelas.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-2.jpg"
-            alt="Dokumentasi aktivitas pembelajaran"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto aktivitas kelas'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">AKTIVITAS KELAS</span>
-          <h3>Interaksi dengan Peserta Didik</h3>
-          <p>
-            Momen interaksi, pendampingan, dan keterlibatan
-            peserta didik dalam proses pembelajaran.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-3.jpg"
-            alt="Dokumentasi kegiatan sekolah"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto kegiatan sekolah'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">KEGIATAN SEKOLAH</span>
-          <h3>Aktivitas di Lingkungan Sekolah</h3>
-          <p>
-            Dokumentasi kegiatan dan pengalaman selama
-            beraktivitas di lingkungan sekolah.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-4.jpg"
-            alt="Dokumentasi kolaborasi"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto kolaborasi'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">KOLABORASI</span>
-          <h3>Kolaborasi dan Diskusi</h3>
-          <p>
-            Momen berdiskusi, berkolaborasi, dan berbagi
-            pengalaman dengan warga sekolah.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-5.jpg"
-            alt="Dokumentasi kegiatan pendukung"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto kegiatan pendukung'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">KEGIATAN PENDUKUNG</span>
-          <h3>Pengalaman Nonmengajar</h3>
-          <p>
-            Berbagai kegiatan pendukung yang menjadi bagian
-            dari pengalaman praktik di sekolah.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="documentation-card">
-
-        <div class="documentation-image" onclick="openImage(this)">
-          <img src="assets/dokumentasi-6.jpg"
-            alt="Dokumentasi pengalaman PPL"
-            onerror="this.remove();this.parentElement.textContent='Tambahkan foto pengalaman PPL'">
-        </div>
-
-        <div class="documentation-info">
-          <span class="documentation-label">PPL MOMENTS</span>
-          <h3>Kenangan Selama PPL</h3>
-          <p>
-            Kumpulan momen berharga yang menjadi bagian
-            dari perjalanan pengembangan diri.
-          </p>
-        </div>
-
-      </article>
-
-    </div>
-
-    <p class="documentation-note">
-      *Foto dokumentasi dapat ditambahkan dengan mengganti
-      gambar pada folder assets.
-    </p>
-
   </section>
 
 </main>
 
-<!-- IMAGE VIEWER -->
-<div class="image-viewer" id="imageViewer" onclick="closeImage()">
+<!-- PORTOFOLIO 1 -->
+<section class="detail-section" id="portofolio-1">
 
-  <button class="close-viewer" aria-label="Tutup gambar">
-    &times;
-  </button>
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="#beranda">Beranda</a> / Portofolio 1
+      </div>
+      <div class="eyebrow">PORTOFOLIO 01</div>
+      <h1>Praktik Mengajar Mandiri Siklus 1</h1>
+      <p>
+        Dokumentasi perencanaan, pelaksanaan, dan evaluasi pembelajaran
+        pada praktik mengajar mandiri siklus pertama.
+      </p>
+      <div class="yellow-line"></div>
+    </div>
+  </div>
 
-  <img id="viewerImage" src="" alt="Dokumentasi PPL">
+  <div class="section">
+    <div class="container">
 
-</div>
+      <div class="content-panel">
+        <h2>Gambaran Umum</h2>
+        <p>
+          Halaman ini memuat perangkat pembelajaran terbaik yang
+          dikembangkan dan digunakan selama praktik mengajar mandiri
+          siklus 1, beserta dokumentasi video pelaksanaan pembelajaran.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Perangkat Pembelajaran</h2>
+        <p>
+          Dokumentasi perangkat pembelajaran yang digunakan
+          dalam pelaksanaan praktik mengajar mandiri.
+        </p>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Modul Ajar / RPP</h3>
+            <p>Dokumen perencanaan pembelajaran siklus 1.</p>
+            <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Perangkat Pendukung</h3>
+            <p>Media, bahan ajar, LKPD, dan instrumen penilaian.</p>
+            <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Video Praktik Mengajar</h2>
+        <p>
+          Dokumentasi pelaksanaan pembelajaran sebagai gambaran
+          penerapan rancangan pembelajaran di kelas.
+        </p>
+        <div class="empty-note">
+          Tambahkan tautan video praktik mengajar siklus 1 di bagian ini.
+        </div>
+        <a href="#" class="back-link" target="_blank">Lihat video praktik mengajar →</a>
+      </div>
+
+      <div class="content-panel">
+        <h2>Catatan Pengembangan</h2>
+        <p>
+          Bagian ini dapat digunakan untuk menjelaskan pengalaman,
+          hal yang telah berjalan dengan baik, serta aspek pembelajaran
+          yang masih perlu ditingkatkan berdasarkan pelaksanaan siklus 1.
+        </p>
+      </div>
+
+      <a href="#beranda" class="back-link">← Kembali ke Beranda</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTOFOLIO 2 -->
+<section class="detail-section" id="portofolio-2">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="#beranda">Beranda</a> / Portofolio 2
+      </div>
+      <div class="eyebrow">PORTOFOLIO 02</div>
+      <h1>Praktik Mengajar Mandiri Siklus 2–4</h1>
+      <p>
+        Dokumentasi pengembangan kompetensi dan pelaksanaan
+        praktik mengajar mandiri pada siklus kedua hingga keempat.
+      </p>
+      <div class="yellow-line"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+
+      <div class="content-panel">
+        <h2>Gambaran Umum</h2>
+        <p>
+          Halaman ini memuat perangkat pembelajaran terbaik yang
+          dikembangkan selama praktik mengajar mandiri siklus 2–4,
+          serta dokumentasi video pelaksanaan pembelajaran.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Perangkat Pembelajaran</h2>
+        <p>
+          Dokumentasi perangkat pembelajaran terpilih yang digunakan
+          dalam praktik mengajar mandiri.
+        </p>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Modul Ajar / RPP</h3>
+            <p>Dokumen perencanaan pembelajaran siklus 2–4.</p>
+            <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Perangkat Pendukung</h3>
+            <p>Media, bahan ajar, LKPD, dan instrumen penilaian.</p>
+            <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Video Praktik Mengajar</h2>
+        <p>Dokumentasi pelaksanaan pembelajaran pada siklus 2–4.</p>
+        <div class="empty-note">
+          Tambahkan tautan video praktik mengajar siklus 2–4 di bagian ini.
+        </div>
+        <a href="#" class="back-link" target="_blank">Lihat video praktik mengajar →</a>
+      </div>
+
+      <div class="content-panel">
+        <h2>Catatan Pengembangan</h2>
+        <p>
+          Bagian ini dapat diisi dengan perkembangan praktik mengajar,
+          penyesuaian strategi pembelajaran, dan upaya perbaikan
+          berdasarkan pengalaman pada siklus sebelumnya.
+        </p>
+      </div>
+
+      <a href="#beranda" class="back-link">← Kembali ke Beranda</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- REFLEKSI -->
+<section class="detail-section" id="refleksi">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="#beranda">Beranda</a> / Refleksi
+      </div>
+      <div class="eyebrow">PORTOFOLIO 03</div>
+      <h1>Refleksi Perjalanan Belajar</h1>
+      <p>
+        Ruang untuk meninjau pengalaman, memahami perkembangan diri,
+        dan merencanakan langkah perbaikan dalam perjalanan menjadi pendidik.
+      </p>
+      <div class="yellow-line"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+
+      <div class="content-panel">
+        <h2>Filosofi Mengajar</h2>
+        <p>
+          Bagian ini berisi pandangan dan keyakinan tentang peran guru,
+          proses belajar, serta lingkungan pembelajaran yang ingin
+          diwujudkan dalam praktik pendidikan.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Identitas dan Cita-Cita sebagai Pendidik</h2>
+        <p>
+          Bagian ini memuat gambaran diri sebagai calon pendidik,
+          nilai-nilai yang ingin dijunjung, dan tujuan pengembangan
+          profesional dalam menjalankan tugas sebagai guru.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Evaluasi Diri</h2>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Kekuatan</h3>
+            <p>
+              Hal-hal positif yang telah berkembang dan menjadi
+              modal dalam melaksanakan pembelajaran.
+            </p>
+          </div>
+
+          <div class="resource-card">
+            <h3>Aspek yang Perlu Ditingkatkan</h3>
+            <p>
+              Tantangan dan keterampilan yang masih perlu
+              dikembangkan melalui pengalaman dan latihan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Rencana Tindak Lanjut</h2>
+        <p>
+          Rencana konkret untuk meningkatkan kualitas pembelajaran,
+          mengembangkan kompetensi pedagogik dan profesional,
+          serta menerapkan hasil refleksi dalam praktik mengajar berikutnya.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Dokumentasi Refleksi</h2>
+        <p>
+          Tambahkan dokumen refleksi, lembar evaluasi, atau bukti
+          kegiatan reflektif yang relevan.
+        </p>
+        <div class="empty-note">
+          Tambahkan tautan dokumen refleksi jika sudah tersedia.
+        </div>
+      </div>
+
+      <a href="#beranda" class="back-link">← Kembali ke Beranda</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PPL TERBIMBING -->
+<section class="detail-section" id="ppl-terbimbing">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="#beranda">Beranda</a> / Portofolio PPL Terbimbing
+      </div>
+      <div class="eyebrow">PORTOFOLIO 04</div>
+      <h1>Portofolio PPL Terbimbing</h1>
+      <p>
+        Dokumentasi proses belajar dan pengalaman selama mengikuti
+        praktik pengalaman lapangan dengan bimbingan guru pamong
+        dan dosen pembimbing lapangan.
+      </p>
+      <div class="yellow-line"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+
+      <div class="content-panel">
+        <h2>Gambaran Umum PPL Terbimbing</h2>
+        <p>
+          Bagian ini memuat rangkaian pengalaman, kegiatan,
+          dan hasil pelaksanaan PPL terbimbing sebagai bagian
+          dari proses pengembangan kompetensi calon pendidik.
+        </p>
+      </div>
+
+      <div class="content-panel">
+        <h2>Perencanaan dan Persiapan Pembelajaran</h2>
+        <p>
+          Dokumentasi kegiatan persiapan pembelajaran, penyusunan
+          perangkat, konsultasi, dan koordinasi dengan guru pamong
+          maupun dosen pembimbing.
+        </p>
+        <div class="empty-note">
+          Tambahkan dokumen atau bukti kegiatan perencanaan di sini.
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Pelaksanaan Kegiatan PPL</h2>
+        <p>
+          Dokumentasi pelaksanaan kegiatan pembelajaran dan kegiatan
+          lain yang relevan selama praktik pengalaman lapangan.
+        </p>
+        <div class="empty-note">
+          Tambahkan foto, video, atau tautan dokumentasi kegiatan PPL.
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Bimbingan dan Umpan Balik</h2>
+        <p>
+          Catatan hasil bimbingan, masukan dari guru pamong dan dosen
+          pembimbing, serta tindak lanjut yang dilakukan untuk
+          meningkatkan kualitas pelaksanaan pembelajaran.
+        </p>
+        <div class="empty-note">
+          Tambahkan catatan atau dokumen hasil bimbingan.
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h2>Hasil dan Pengalaman</h2>
+        <p>
+          Uraian pengalaman dan pembelajaran yang diperoleh selama
+          mengikuti PPL terbimbing, termasuk perkembangan kompetensi
+          dan pemahaman terhadap lingkungan sekolah.
+        </p>
+      </div>
+
+      <a href="#beranda" class="back-link">← Kembali ke Beranda</a>
+
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-
+<footer>
   <div class="container">
 
     <div class="footer-grid">
 
-      <div>
-        <div class="footer-title">the creative journal.</div>
+      <div class="footer-column">
+        <h3>E-Portofolio</h3>
 
-        <p class="footer-copy">
-          A collection of lessons, experiences, and growth.
-          Dokumentasi perjalanan belajar dan praktik mengajar
-          dalam Program Pendidikan Profesi Guru.
+        <p>
+          Portofolio digital ini disusun sebagai bentuk dokumentasi
+          dan refleksi selama mengikuti program Pendidikan Profesi
+          Guru (PPG) Prajabatan di Universitas Negeri Yogyakarta.
         </p>
+
+        <a class="contact-link"
+           href="https://www.instagram.com/_heniaaa/"
+           target="_blank"
+           rel="noopener">
+          <span class="contact-icon">◎</span>
+          <span>@_heniaaa</span>
+        </a>
+
+        <a class="contact-link" href="mailto:heniasi@uny.ac.id">
+          <span class="contact-icon">✉</span>
+          <span>heniasi@uny.ac.id</span>
+        </a>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3>Navigasi</h3>
-
-        <div class="footer-links">
-          <a href="index.html">Beranda</a>
-          <a href="eportfolio1.html">E-Portfolio 1</a>
-          <a href="portfolio1.html">Portofolio 1</a>
-          <a href="portfolio2.html">Portofolio 2</a>
-          <a href="portfolio3.html">Portofolio 3</a>
-          <a href="reflections.html">Refleksi</a>
-        </div>
+        <a class="footer-link" href="#beranda">⌂ Beranda</a>
+        <a class="footer-link" href="#portofolio-1">⌂ Portofolio 1</a>
+        <a class="footer-link" href="#portofolio-2">⌂ Portofolio 2</a>
+        <a class="footer-link" href="#refleksi">⌂ Refleksi</a>
+        <a class="footer-link" href="#ppl-terbimbing">⌂ Portofolio PPL Terbimbing</a>
       </div>
 
-      <div>
-        <h3>Terhubung dengan Saya</h3>
+      <div class="footer-column">
+        <h3>Lokasi Kampus</h3>
 
-        <div class="footer-links">
-          <a href="mailto:emailkamu@example.com">
-            emailkamu@example.com
-          </a>
-          <span>Universitas Negeri Yogyakarta</span>
-          <span>SMK Negeri 2 Yogyakarta</span>
-        </div>
+        <iframe
+          class="map-frame"
+          src="https://www.google.com/maps?q=Universitas%20Negeri%20Yogyakarta%20Karangmalang&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Universitas Negeri Yogyakarta">
+        </iframe>
+
+        <p class="map-address">
+          Kampus Karangmalang, Sleman, Daerah Istimewa Yogyakarta 55281
+        </p>
+
+        <a class="map-button"
+           href="https://share.google/L0Jeua8QLmdmwqVxM"
+           target="_blank"
+           rel="noopener">
+          Open in Maps ↗
+        </a>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      © 2026 The Creative Journal. All rights reserved.
+      © 2026 The Teaching Journey. All rights reserved.
     </div>
 
   </div>
-
 </footer>
 
+<!-- LIGHTBOX DOKUMENTASI -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="closeLightbox" aria-label="Tutup">
+    &times;
+  </button>
+  <img src="" alt="Dokumentasi diperbesar" id="lightboxImage">
+</div>
+
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+// NAVIGASI ANTAR BAGIAN
+const navLinks = document.querySelectorAll('nav a');
+const detailSections = document.querySelectorAll('.detail-section');
+const homeSections = document.querySelectorAll(
+  'main > .hero, main > .section'
+);
 
-menuToggle.addEventListener("click", () => {
+function showPage() {
+  const page = window.location.hash.replace('#', '') || 'beranda';
 
-  const isOpen = mainNav.classList.toggle("open");
-
-  menuToggle.textContent = isOpen ? "✕" : "☰";
-
-  menuToggle.setAttribute(
-    "aria-expanded",
-    String(isOpen)
-  );
-
-});
-
-mainNav.querySelectorAll("a").forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    mainNav.classList.remove("open");
-
-    menuToggle.textContent = "☰";
-
-    menuToggle.setAttribute("aria-expanded", "false");
-
+  detailSections.forEach(section => {
+    section.classList.toggle('show', section.id === page);
   });
 
+  homeSections.forEach(section => {
+    section.style.display = page === 'beranda' ? '' : 'none';
+  });
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').replace('#', '');
+    link.classList.toggle('active', linkPage === page);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('hashchange', showPage);
+window.addEventListener('DOMContentLoaded', showPage);
+
+// GALERI FOTO
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const closeLightbox = document.getElementById('closeLightbox');
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
 });
 
-function openImage(element) {
-
-  const image = element.querySelector("img");
-
-  if (!image || !image.complete || !image.naturalWidth) {
-    return;
-  }
-
-  document.getElementById("viewerImage").src = image.src;
-
-  document.getElementById("imageViewer").classList.add("show");
-
+function hideLightbox() {
+  lightbox.classList.remove('show');
+  document.body.style.overflow = '';
 }
 
-function closeImage() {
+closeLightbox.addEventListener('click', hideLightbox);
 
-  document.getElementById("imageViewer").classList.remove("show");
-
-}
-
-document.addEventListener("keydown", event => {
-
-  if (event.key === "Escape") {
-    closeImage();
+lightbox.addEventListener('click', event => {
+  if (event.target === lightbox) {
+    hideLightbox();
   }
+});
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    hideLightbox();
+  }
 });
 </script>
 
