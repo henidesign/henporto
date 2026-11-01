@@ -55,7 +55,9 @@ button {
   margin: auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 
 header {
   background: white;
@@ -122,7 +124,9 @@ nav a.active {
   border-color: var(--yellow);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   background: var(--pale-blue);
@@ -159,7 +163,9 @@ nav a.active {
   margin-top: 25px;
 }
 
-/* GENERAL SECTION */
+/* =========================
+   GENERAL SECTION
+========================= */
 
 section {
   scroll-margin-top: 100px;
@@ -186,7 +192,9 @@ section {
   max-width: 700px;
 }
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-grid {
   display: grid;
@@ -242,7 +250,55 @@ section {
   margin-top: 5px;
 }
 
-/* ABOUT */
+.profile-description {
+  margin-top: 27px;
+  padding: 22px;
+  background: var(--pale-blue);
+  border-radius: 15px;
+}
+
+.profile-description h3,
+.vision-card h3,
+.commitment-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.profile-description p,
+.vision-card p,
+.commitment-card p {
+  color: #526582;
+  font-size: 13px;
+}
+
+.vision-card {
+  margin-top: 14px;
+  padding: 22px;
+  background: var(--pale-yellow);
+  border-radius: 15px;
+  border-left: 4px solid var(--yellow);
+}
+
+.commitment-card {
+  margin-top: 14px;
+  padding: 22px;
+  background: var(--pale-lavender);
+  border-radius: 15px;
+}
+
+.commitment-card ul {
+  padding-left: 19px;
+  color: #526582;
+  font-size: 13px;
+}
+
+.commitment-card li {
+  margin: 6px 0;
+}
+
+/* =========================
+   ABOUT PORTFOLIO
+========================= */
 
 .about-section {
   background: white;
@@ -271,12 +327,25 @@ section {
   color: var(--muted);
 }
 
-.info-card:nth-child(1) { background: var(--pale-blue); }
-.info-card:nth-child(2) { background: var(--pale-yellow); }
-.info-card:nth-child(3) { background: var(--pale-lavender); }
-.info-card:nth-child(4) { background: #F0F4F9; }
+.info-card:nth-child(1) {
+  background: var(--pale-blue);
+}
 
-/* PORTFOLIO */
+.info-card:nth-child(2) {
+  background: var(--pale-yellow);
+}
+
+.info-card:nth-child(3) {
+  background: var(--pale-lavender);
+}
+
+.info-card:nth-child(4) {
+  background: #F0F4F9;
+}
+
+/* =========================
+   PORTFOLIO COLLECTION
+========================= */
 
 .portfolio-grid {
   display: grid;
@@ -299,10 +368,21 @@ section {
   box-shadow: 0 18px 40px rgba(38,54,83,.12);
 }
 
-.portfolio-card:nth-child(1) { border-top: 4px solid var(--blue); }
-.portfolio-card:nth-child(2) { border-top: 4px solid var(--yellow); }
-.portfolio-card:nth-child(3) { border-top: 4px solid #A89BD4; }
-.portfolio-card:nth-child(4) { border-top: 4px solid #8CA9D5; }
+.portfolio-card:nth-child(1) {
+  border-top: 4px solid var(--blue);
+}
+
+.portfolio-card:nth-child(2) {
+  border-top: 4px solid var(--yellow);
+}
+
+.portfolio-card:nth-child(3) {
+  border-top: 4px solid #A89BD4;
+}
+
+.portfolio-card:nth-child(4) {
+  border-top: 4px solid #8CA9D5;
+}
 
 .card-number {
   display: inline-block;
@@ -334,7 +414,9 @@ section {
   font-weight: 800;
 }
 
-/* DETAIL PAGES */
+/* =========================
+   DETAIL PAGES
+========================= */
 
 .detail-section {
   display: none;
@@ -447,7 +529,9 @@ section {
   margin-top: 15px;
 }
 
-/* DOCUMENTATION */
+/* =========================
+   DOCUMENTATION GALLERY
+========================= */
 
 .gallery-section {
   background: white;
@@ -480,7 +564,9 @@ section {
   transform: scale(1.04);
 }
 
-/* CLOSING */
+/* =========================
+   CLOSING SECTION
+========================= */
 
 .closing {
   background: var(--blue);
@@ -501,7 +587,9 @@ section {
   max-width: 650px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   background: var(--blue);
@@ -593,7 +681,9 @@ footer {
   font-size: 11px;
 }
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 .lightbox {
   position: fixed;
@@ -631,7 +721,9 @@ footer {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width: 850px) {
   .header-inner {
@@ -711,6 +803,7 @@ footer {
 <!-- HEADER -->
 <header>
   <div class="container header-inner">
+
     <a href="#beranda" class="brand">
       The Teaching Journey<span>.</span>
       <small>PPG PRAJABATAN · UNY · 2026</small>
@@ -723,23 +816,35 @@ footer {
       <a href="#refleksi">Refleksi</a>
       <a href="#ppl-terbimbing">Portofolio PPL Terbimbing</a>
     </nav>
+
   </div>
 </header>
 
-<!-- BERANDA -->
+
+<!-- =========================
+     HOMEPAGE
+========================= -->
+
 <main id="beranda">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
+
       <div class="eyebrow">PORTOFOLIO PENDIDIKAN</div>
+
       <h1>Jejak Pengembangan Diri</h1>
+
       <p>
         Selamat datang di portofolio yang mendokumentasikan perjalanan,
         pengalaman, dan perkembangan saya selama praktik mengajar.
       </p>
+
       <div class="yellow-line"></div>
+
     </div>
   </section>
+
 
   <!-- PROFIL -->
   <section class="section">
@@ -754,22 +859,72 @@ footer {
       </div>
 
       <div class="profile-info">
-        <div class="eyebrow">PERKENALAN</div>
-        <h2>Halo, Saya Calon Pendidik.</h2>
-        <div class="profile-name">Vian</div>
-        <p class="profile-detail">Universitas Negeri Yogyakarta</p>
-        <p class="profile-detail">Informatika</p>
-      </div>
 
+        <div class="eyebrow">PROFIL PENDIDIK</div>
+
+        <h2>Halo, Saya Vian!</h2>
+
+        <div class="profile-name">Calon Guru Informatika</div>
+
+        <p class="profile-detail">
+          Universitas Negeri Yogyakarta
+        </p>
+
+        <p class="profile-detail">
+          PPG Prajabatan 2026
+        </p>
+
+
+        <!-- TENTANG SAYA -->
+        <div class="profile-description">
+          <h3>Tentang Saya</h3>
+
+          <p>
+            Saya merupakan calon pendidik bidang Informatika yang
+            memiliki ketertarikan pada pengembangan pembelajaran
+            kreatif, pemanfaatan teknologi, dan penciptaan lingkungan
+            belajar yang mendukung potensi setiap peserta didik.
+          </p>
+        </div>
+
+
+        <!-- VISI SEBAGAI PENDIDIK -->
+        <div class="vision-card">
+          <h3>Visi sebagai Pendidik</h3>
+
+          <p>
+            Menjadi pendidik yang tidak hanya membekali ilmu,
+            tetapi juga dapat mendorong murid merasa mampu,
+            dihargai, dan berani berkembang melalui lingkungan
+            belajar yang aman, nyaman, dan inklusif.
+          </p>
+        </div>
+
+
+        <!-- KOMITMEN PENGEMBANGAN DIRI -->
+        <div class="commitment-card">
+          <h3>Komitmen Pengembangan Diri</h3>
+
+          <ul>
+            <li>Mengembangkan pembelajaran yang kreatif dan relevan.</li>
+            <li>Memanfaatkan teknologi secara bijak dan inovatif.</li>
+            <li>Membangun lingkungan belajar yang inklusif dan positif.</li>
+            <li>Terus belajar melalui refleksi dan evaluasi.</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- TENTANG -->
+
+  <!-- TENTANG PORTOFOLIO -->
   <section class="section about-section">
     <div class="container">
 
       <div class="section-heading">
         <h2>Tentang Portofolio Ini</h2>
+
         <p>
           Portofolio ini menjadi dokumentasi perjalanan selama mengikuti
           PPG Prajabatan. Berbagai perangkat pembelajaran, pengalaman
@@ -779,29 +934,39 @@ footer {
       </div>
 
       <div class="info-grid">
+
         <article class="info-card">
           <h3>Pembelajaran</h3>
-          <p>Proses dan pengalaman dalam mengembangkan kompetensi pembelajaran.</p>
+          <p>
+            Proses dan pengalaman dalam mengembangkan kompetensi pembelajaran.
+          </p>
         </article>
 
         <article class="info-card">
           <h3>Pengembangan</h3>
-          <p>Upaya meningkatkan kemampuan dan profesionalisme sebagai pendidik.</p>
+          <p>
+            Upaya meningkatkan kemampuan dan profesionalisme sebagai pendidik.
+          </p>
         </article>
 
         <article class="info-card">
           <h3>Refleksi</h3>
-          <p>Evaluasi pengalaman belajar untuk menentukan langkah perbaikan.</p>
+          <p>
+            Evaluasi pengalaman belajar untuk menentukan langkah perbaikan.
+          </p>
         </article>
 
         <article class="info-card">
           <h3>Pengalaman PPL</h3>
-          <p>Dokumentasi pengalaman praktik nyata di lingkungan sekolah.</p>
+          <p>
+            Dokumentasi pengalaman praktik nyata di lingkungan sekolah.
+          </p>
         </article>
-      </div>
 
+      </div>
     </div>
   </section>
+
 
   <!-- KOLEKSI PORTOFOLIO -->
   <section class="section">
@@ -809,6 +974,7 @@ footer {
 
       <div class="section-heading">
         <h2>Jelajahi Portofolio</h2>
+
         <p>
           Dokumentasi perjalanan praktik dan pengembangan kompetensi
           selama mengikuti program PPG Prajabatan.
@@ -819,41 +985,56 @@ footer {
 
         <a href="#portofolio-1" class="portfolio-card">
           <span class="card-number">PORTOFOLIO 01</span>
+
           <h3>Praktik Mengajar Mandiri Siklus 1</h3>
+
           <p>
             Perangkat pembelajaran terbaik dan dokumentasi video
             praktik mengajar pada siklus pertama.
           </p>
+
           <span class="card-link">Lihat portofolio →</span>
         </a>
 
+
         <a href="#portofolio-2" class="portfolio-card">
           <span class="card-number">PORTOFOLIO 02</span>
+
           <h3>Praktik Mengajar Mandiri Siklus 2–4</h3>
+
           <p>
             Perangkat pembelajaran terbaik dan dokumentasi video
             praktik mengajar pada siklus kedua hingga keempat.
           </p>
+
           <span class="card-link">Lihat portofolio →</span>
         </a>
 
+
         <a href="#refleksi" class="portfolio-card">
           <span class="card-number">PORTOFOLIO 03</span>
+
           <h3>Refleksi</h3>
+
           <p>
             Filosofi mengajar, evaluasi pengalaman, identifikasi
             kekuatan dan kelemahan, serta rencana tindak lanjut.
           </p>
+
           <span class="card-link">Lihat portofolio →</span>
         </a>
 
+
         <a href="#ppl-terbimbing" class="portfolio-card">
           <span class="card-number">PORTOFOLIO 04</span>
+
           <h3>Portofolio PPL Terbimbing</h3>
+
           <p>
             Dokumentasi pengalaman, kegiatan, dan hasil pelaksanaan
             praktik pengalaman lapangan terbimbing.
           </p>
+
           <span class="card-link">Lihat portofolio →</span>
         </a>
 
@@ -861,12 +1042,14 @@ footer {
     </div>
   </section>
 
-  <!-- DOKUMENTASI -->
+
+  <!-- DOKUMENTASI PPL -->
   <section class="section gallery-section">
     <div class="container">
 
       <div class="section-heading">
         <h2>Dokumentasi PPL</h2>
+
         <p>
           Potongan pengalaman dan kegiatan selama melaksanakan
           praktik pengalaman lapangan di sekolah.
@@ -876,53 +1059,79 @@ footer {
       <div class="gallery-grid">
 
         <button class="gallery-item" type="button">
-          <img src="assets/dokumentasi-1.jpg" alt="Dokumentasi PPL 1">
+          <img
+            src="assets/dokumentasi-1.jpg"
+            alt="Dokumentasi PPL 1"
+          >
         </button>
 
         <button class="gallery-item" type="button">
-          <img src="assets/dokumentasi-2.jpg" alt="Dokumentasi PPL 2">
+          <img
+            src="assets/dokumentasi-2.jpg"
+            alt="Dokumentasi PPL 2"
+          >
         </button>
 
         <button class="gallery-item" type="button">
-          <img src="assets/dokumentasi-3.jpg" alt="Dokumentasi PPL 3">
+          <img
+            src="assets/dokumentasi-3.jpg"
+            alt="Dokumentasi PPL 3"
+          >
         </button>
 
         <button class="gallery-item" type="button">
-          <img src="assets/dokumentasi-4.jpg" alt="Dokumentasi PPL 4">
+          <img
+            src="assets/dokumentasi-4.jpg"
+            alt="Dokumentasi PPL 4"
+          >
         </button>
 
       </div>
     </div>
   </section>
 
+
   <!-- PENUTUP -->
   <section class="closing">
     <div class="container">
+
       <h2>Belajar, Bertumbuh, dan Menginspirasi.</h2>
+
       <p>
         Setiap langkah menjadi bagian dari proses pengembangan diri
         sebagai seorang pendidik.
       </p>
+
     </div>
   </section>
 
 </main>
 
-<!-- PORTOFOLIO 1 -->
+
+<!-- =========================
+     PORTOFOLIO 1
+========================= -->
+
 <section class="detail-section" id="portofolio-1">
 
   <div class="page-hero">
     <div class="container">
+
       <div class="breadcrumb">
         <a href="#beranda">Beranda</a> / Portofolio 1
       </div>
+
       <div class="eyebrow">PORTOFOLIO 01</div>
+
       <h1>Praktik Mengajar Mandiri Siklus 1</h1>
+
       <p>
         Dokumentasi perencanaan, pelaksanaan, dan evaluasi pembelajaran
         pada praktik mengajar mandiri siklus pertama.
       </p>
+
       <div class="yellow-line"></div>
+
     </div>
   </div>
 
@@ -931,6 +1140,7 @@ footer {
 
       <div class="content-panel">
         <h2>Gambaran Umum</h2>
+
         <p>
           Halaman ini memuat perangkat pembelajaran terbaik yang
           dikembangkan dan digunakan selama praktik mengajar mandiri
@@ -938,14 +1148,17 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Perangkat Pembelajaran</h2>
+
         <p>
           Dokumentasi perangkat pembelajaran yang digunakan
           dalam pelaksanaan praktik mengajar mandiri.
         </p>
 
         <div class="resource-grid">
+
           <div class="resource-card">
             <h3>Modul Ajar / RPP</h3>
             <p>Dokumen perencanaan pembelajaran siklus 1.</p>
@@ -957,23 +1170,32 @@ footer {
             <p>Media, bahan ajar, LKPD, dan instrumen penilaian.</p>
             <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
           </div>
+
         </div>
       </div>
 
+
       <div class="content-panel">
         <h2>Video Praktik Mengajar</h2>
+
         <p>
           Dokumentasi pelaksanaan pembelajaran sebagai gambaran
           penerapan rancangan pembelajaran di kelas.
         </p>
+
         <div class="empty-note">
           Tambahkan tautan video praktik mengajar siklus 1 di bagian ini.
         </div>
-        <a href="#" class="back-link" target="_blank">Lihat video praktik mengajar →</a>
+
+        <a href="#" class="back-link" target="_blank">
+          Lihat video praktik mengajar →
+        </a>
       </div>
+
 
       <div class="content-panel">
         <h2>Catatan Pengembangan</h2>
+
         <p>
           Bagian ini dapat digunakan untuk menjelaskan pengalaman,
           hal yang telah berjalan dengan baik, serta aspek pembelajaran
@@ -987,21 +1209,31 @@ footer {
   </div>
 </section>
 
-<!-- PORTOFOLIO 2 -->
+
+<!-- =========================
+     PORTOFOLIO 2
+========================= -->
+
 <section class="detail-section" id="portofolio-2">
 
   <div class="page-hero">
     <div class="container">
+
       <div class="breadcrumb">
         <a href="#beranda">Beranda</a> / Portofolio 2
       </div>
+
       <div class="eyebrow">PORTOFOLIO 02</div>
+
       <h1>Praktik Mengajar Mandiri Siklus 2–4</h1>
+
       <p>
         Dokumentasi pengembangan kompetensi dan pelaksanaan
         praktik mengajar mandiri pada siklus kedua hingga keempat.
       </p>
+
       <div class="yellow-line"></div>
+
     </div>
   </div>
 
@@ -1010,6 +1242,7 @@ footer {
 
       <div class="content-panel">
         <h2>Gambaran Umum</h2>
+
         <p>
           Halaman ini memuat perangkat pembelajaran terbaik yang
           dikembangkan selama praktik mengajar mandiri siklus 2–4,
@@ -1017,14 +1250,17 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Perangkat Pembelajaran</h2>
+
         <p>
           Dokumentasi perangkat pembelajaran terpilih yang digunakan
           dalam praktik mengajar mandiri.
         </p>
 
         <div class="resource-grid">
+
           <div class="resource-card">
             <h3>Modul Ajar / RPP</h3>
             <p>Dokumen perencanaan pembelajaran siklus 2–4.</p>
@@ -1036,20 +1272,31 @@ footer {
             <p>Media, bahan ajar, LKPD, dan instrumen penilaian.</p>
             <a href="#" target="_blank">Tambahkan tautan dokumen →</a>
           </div>
+
         </div>
       </div>
+
 
       <div class="content-panel">
         <h2>Video Praktik Mengajar</h2>
-        <p>Dokumentasi pelaksanaan pembelajaran pada siklus 2–4.</p>
+
+        <p>
+          Dokumentasi pelaksanaan pembelajaran pada siklus 2–4.
+        </p>
+
         <div class="empty-note">
           Tambahkan tautan video praktik mengajar siklus 2–4 di bagian ini.
         </div>
-        <a href="#" class="back-link" target="_blank">Lihat video praktik mengajar →</a>
+
+        <a href="#" class="back-link" target="_blank">
+          Lihat video praktik mengajar →
+        </a>
       </div>
+
 
       <div class="content-panel">
         <h2>Catatan Pengembangan</h2>
+
         <p>
           Bagian ini dapat diisi dengan perkembangan praktik mengajar,
           penyesuaian strategi pembelajaran, dan upaya perbaikan
@@ -1063,21 +1310,31 @@ footer {
   </div>
 </section>
 
-<!-- REFLEKSI -->
+
+<!-- =========================
+     REFLEKSI
+========================= -->
+
 <section class="detail-section" id="refleksi">
 
   <div class="page-hero">
     <div class="container">
+
       <div class="breadcrumb">
         <a href="#beranda">Beranda</a> / Refleksi
       </div>
+
       <div class="eyebrow">PORTOFOLIO 03</div>
+
       <h1>Refleksi Perjalanan Belajar</h1>
+
       <p>
         Ruang untuk meninjau pengalaman, memahami perkembangan diri,
         dan merencanakan langkah perbaikan dalam perjalanan menjadi pendidik.
       </p>
+
       <div class="yellow-line"></div>
+
     </div>
   </div>
 
@@ -1086,6 +1343,7 @@ footer {
 
       <div class="content-panel">
         <h2>Filosofi Mengajar</h2>
+
         <p>
           Bagian ini berisi pandangan dan keyakinan tentang peran guru,
           proses belajar, serta lingkungan pembelajaran yang ingin
@@ -1093,8 +1351,10 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Identitas dan Cita-Cita sebagai Pendidik</h2>
+
         <p>
           Bagian ini memuat gambaran diri sebagai calon pendidik,
           nilai-nilai yang ingin dijunjung, dan tujuan pengembangan
@@ -1102,12 +1362,15 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Evaluasi Diri</h2>
 
         <div class="resource-grid">
+
           <div class="resource-card">
             <h3>Kekuatan</h3>
+
             <p>
               Hal-hal positif yang telah berkembang dan menjadi
               modal dalam melaksanakan pembelajaran.
@@ -1116,16 +1379,20 @@ footer {
 
           <div class="resource-card">
             <h3>Aspek yang Perlu Ditingkatkan</h3>
+
             <p>
               Tantangan dan keterampilan yang masih perlu
               dikembangkan melalui pengalaman dan latihan.
             </p>
           </div>
+
         </div>
       </div>
 
+
       <div class="content-panel">
         <h2>Rencana Tindak Lanjut</h2>
+
         <p>
           Rencana konkret untuk meningkatkan kualitas pembelajaran,
           mengembangkan kompetensi pedagogik dan profesional,
@@ -1133,12 +1400,15 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Dokumentasi Refleksi</h2>
+
         <p>
           Tambahkan dokumen refleksi, lembar evaluasi, atau bukti
           kegiatan reflektif yang relevan.
         </p>
+
         <div class="empty-note">
           Tambahkan tautan dokumen refleksi jika sudah tersedia.
         </div>
@@ -1150,22 +1420,32 @@ footer {
   </div>
 </section>
 
-<!-- PPL TERBIMBING -->
+
+<!-- =========================
+     PPL TERBIMBING
+========================= -->
+
 <section class="detail-section" id="ppl-terbimbing">
 
   <div class="page-hero">
     <div class="container">
+
       <div class="breadcrumb">
         <a href="#beranda">Beranda</a> / Portofolio PPL Terbimbing
       </div>
+
       <div class="eyebrow">PORTOFOLIO 04</div>
+
       <h1>Portofolio PPL Terbimbing</h1>
+
       <p>
         Dokumentasi proses belajar dan pengalaman selama mengikuti
         praktik pengalaman lapangan dengan bimbingan guru pamong
         dan dosen pembimbing lapangan.
       </p>
+
       <div class="yellow-line"></div>
+
     </div>
   </div>
 
@@ -1174,6 +1454,7 @@ footer {
 
       <div class="content-panel">
         <h2>Gambaran Umum PPL Terbimbing</h2>
+
         <p>
           Bagian ini memuat rangkaian pengalaman, kegiatan,
           dan hasil pelaksanaan PPL terbimbing sebagai bagian
@@ -1181,43 +1462,54 @@ footer {
         </p>
       </div>
 
+
       <div class="content-panel">
         <h2>Perencanaan dan Persiapan Pembelajaran</h2>
+
         <p>
           Dokumentasi kegiatan persiapan pembelajaran, penyusunan
           perangkat, konsultasi, dan koordinasi dengan guru pamong
           maupun dosen pembimbing.
         </p>
+
         <div class="empty-note">
           Tambahkan dokumen atau bukti kegiatan perencanaan di sini.
         </div>
       </div>
 
+
       <div class="content-panel">
         <h2>Pelaksanaan Kegiatan PPL</h2>
+
         <p>
           Dokumentasi pelaksanaan kegiatan pembelajaran dan kegiatan
           lain yang relevan selama praktik pengalaman lapangan.
         </p>
+
         <div class="empty-note">
           Tambahkan foto, video, atau tautan dokumentasi kegiatan PPL.
         </div>
       </div>
 
+
       <div class="content-panel">
         <h2>Bimbingan dan Umpan Balik</h2>
+
         <p>
           Catatan hasil bimbingan, masukan dari guru pamong dan dosen
           pembimbing, serta tindak lanjut yang dilakukan untuk
           meningkatkan kualitas pelaksanaan pembelajaran.
         </p>
+
         <div class="empty-note">
           Tambahkan catatan atau dokumen hasil bimbingan.
         </div>
       </div>
 
+
       <div class="content-panel">
         <h2>Hasil dan Pengalaman</h2>
+
         <p>
           Uraian pengalaman dan pembelajaran yang diperoleh selama
           mengikuti PPL terbimbing, termasuk perkembangan kompetensi
@@ -1231,13 +1523,19 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
   <div class="container">
 
     <div class="footer-grid">
 
+      <!-- KOLOM 1 -->
       <div class="footer-column">
+
         <h3>E-Portofolio</h3>
 
         <p>
@@ -1246,30 +1544,56 @@ footer {
           Guru (PPG) Prajabatan di Universitas Negeri Yogyakarta.
         </p>
 
-        <a class="contact-link"
-           href="https://www.instagram.com/_heniaaa/"
-           target="_blank"
-           rel="noopener">
+        <a
+          class="contact-link"
+          href="https://www.instagram.com/_heniaaa/"
+          target="_blank"
+          rel="noopener"
+        >
           <span class="contact-icon">◎</span>
           <span>@_heniaaa</span>
         </a>
 
-        <a class="contact-link" href="mailto:heniasi@uny.ac.id">
+        <a
+          class="contact-link"
+          href="mailto:heniasi@uny.ac.id"
+        >
           <span class="contact-icon">✉</span>
           <span>heniasi@uny.ac.id</span>
         </a>
+
       </div>
 
+
+      <!-- KOLOM 2 -->
       <div class="footer-column">
+
         <h3>Navigasi</h3>
+
         <a class="footer-link" href="#beranda">⌂ Beranda</a>
-        <a class="footer-link" href="#portofolio-1">⌂ Portofolio 1</a>
-        <a class="footer-link" href="#portofolio-2">⌂ Portofolio 2</a>
-        <a class="footer-link" href="#refleksi">⌂ Refleksi</a>
-        <a class="footer-link" href="#ppl-terbimbing">⌂ Portofolio PPL Terbimbing</a>
+
+        <a class="footer-link" href="#portofolio-1">
+          ⌂ Portofolio 1
+        </a>
+
+        <a class="footer-link" href="#portofolio-2">
+          ⌂ Portofolio 2
+        </a>
+
+        <a class="footer-link" href="#refleksi">
+          ⌂ Refleksi
+        </a>
+
+        <a class="footer-link" href="#ppl-terbimbing">
+          ⌂ Portofolio PPL Terbimbing
+        </a>
+
       </div>
 
+
+      <!-- KOLOM 3 -->
       <div class="footer-column">
+
         <h3>Lokasi Kampus</h3>
 
         <iframe
@@ -1284,12 +1608,15 @@ footer {
           Kampus Karangmalang, Sleman, Daerah Istimewa Yogyakarta 55281
         </p>
 
-        <a class="map-button"
-           href="https://share.google/L0Jeua8QLmdmwqVxM"
-           target="_blank"
-           rel="noopener">
+        <a
+          class="map-button"
+          href="https://share.google/L0Jeua8QLmdmwqVxM"
+          target="_blank"
+          rel="noopener"
+        >
           Open in Maps ↗
         </a>
+
       </div>
 
     </div>
@@ -1301,77 +1628,157 @@ footer {
   </div>
 </footer>
 
-<!-- LIGHTBOX DOKUMENTASI -->
+
+<!-- =========================
+     LIGHTBOX DOKUMENTASI
+========================= -->
+
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="closeLightbox" aria-label="Tutup">
+
+  <button
+    class="lightbox-close"
+    id="closeLightbox"
+    aria-label="Tutup"
+  >
     &times;
   </button>
-  <img src="" alt="Dokumentasi diperbesar" id="lightboxImage">
+
+  <img
+    src=""
+    alt="Dokumentasi diperbesar"
+    id="lightboxImage"
+  >
+
 </div>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
 // NAVIGASI ANTAR BAGIAN
+
 const navLinks = document.querySelectorAll('nav a');
+
 const detailSections = document.querySelectorAll('.detail-section');
+
 const homeSections = document.querySelectorAll(
   'main > .hero, main > .section'
 );
 
 function showPage() {
+
   const page = window.location.hash.replace('#', '') || 'beranda';
 
+  const validPages = [
+    'beranda',
+    'portofolio-1',
+    'portofolio-2',
+    'refleksi',
+    'ppl-terbimbing'
+  ];
+
+  const currentPage = validPages.includes(page)
+    ? page
+    : 'beranda';
+
+  // Menampilkan halaman yang dipilih
   detailSections.forEach(section => {
-    section.classList.toggle('show', section.id === page);
+
+    section.classList.toggle(
+      'show',
+      section.id === currentPage
+    );
+
   });
 
+  // Menampilkan atau menyembunyikan homepage
   homeSections.forEach(section => {
-    section.style.display = page === 'beranda' ? '' : 'none';
+
+    section.style.display =
+      currentPage === 'beranda' ? '' : 'none';
+
   });
 
+  // Mengatur navigasi aktif
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href').replace('#', '');
-    link.classList.toggle('active', linkPage === page);
+
+    const linkPage = link
+      .getAttribute('href')
+      .replace('#', '');
+
+    link.classList.toggle(
+      'active',
+      linkPage === currentPage
+    );
+
   });
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
 }
 
 window.addEventListener('hashchange', showPage);
+
 window.addEventListener('DOMContentLoaded', showPage);
 
-// GALERI FOTO
+
+// GALERI FOTO DAN LIGHTBOX
+
 const lightbox = document.getElementById('lightbox');
+
 const lightboxImage = document.getElementById('lightboxImage');
+
 const closeLightbox = document.getElementById('closeLightbox');
 
 document.querySelectorAll('.gallery-item').forEach(item => {
+
   item.addEventListener('click', () => {
+
     const img = item.querySelector('img');
+
     lightboxImage.src = img.src;
     lightboxImage.alt = img.alt;
+
     lightbox.classList.add('show');
+
     document.body.style.overflow = 'hidden';
+
   });
+
 });
 
 function hideLightbox() {
+
   lightbox.classList.remove('show');
+
   document.body.style.overflow = '';
+
 }
 
 closeLightbox.addEventListener('click', hideLightbox);
 
 lightbox.addEventListener('click', event => {
+
   if (event.target === lightbox) {
     hideLightbox();
   }
+
 });
 
 document.addEventListener('keydown', event => {
+
   if (event.key === 'Escape') {
     hideLightbox();
   }
+
 });
+
 </script>
 
 </body>
